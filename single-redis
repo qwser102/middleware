@@ -1,0 +1,6 @@
+import redis
+
+redis_conn = redis.Redis(host="192.168.184.198",port=30090,password="123456")
+redis_conn.set("test","wy")
+res = redis_conn.get("test")
+print(res)
